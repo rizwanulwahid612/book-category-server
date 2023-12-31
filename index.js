@@ -20,6 +20,7 @@ async function run() {
     try {
         const booksCollection = client.db('books-category-servics').collection('books');
         const usersCollection = client.db('books-category-servics').collection('user');
+        const addNewCollection = client.db('books-category-servics').collection('addnew');
 
         app.get('/api/books', async (req, res) => {
             const cursor = booksCollection.find({});
@@ -34,12 +35,69 @@ async function run() {
 
             res.send(result);
         });
+        app.post('/api/addnew', async (req, res) => {
+            const product = req.body;
 
-        app.post('/api/signup', async (req, res) => {
-            const user = req.body;
-            const result = await usersCollection.insertOne(user);
+            const existing = await addNewCollection.findOne({ _id: product._id });
+            if (existing) {
+                res.status(409).send({ error: 'Id already exists' });
+            } else {
+                const result = await addNewCollection.insertOne(product);
+
+                res.send(result);
+            }
+        });
+        app.delete('/api/adddeletbook/:id', async (req, res) => {
+            const id = req.params.id;
+
+            const result = await addNewCollection.deleteOne({ _id: id });
+            console.log(result);
             res.send(result);
         });
+
+
+        app.get('/api/getaddnew', async (req, res) => {
+            const cursor = addNewCollection.find({});
+            const product = await cursor.toArray();
+
+            res.send({ status: true, data: product });
+        });
+        app.get('/api/getaddbooksingle/:id', async (req, res) => {
+            const title = req.params.id;
+            const query = { _id: title }
+            const result = await addNewCollection.findOne(query);
+            console.log(result);
+            res.send(result);
+        });
+        app.put('/api/editbook/:id', async (req, res) => {
+            const id = req.params.id
+            const query = { _id: id }
+            const projectBody = req.body
+            const options = { upsert: true }
+            const updateProject = {
+                $set: {
+                    title: projectBody.title,
+                    author: projectBody.author,
+                    genre: projectBody.genre,
+                    publicationdate: projectBody.publicationdate,
+                    rating: projectBody.rating,
+                }
+            }
+            const result = await addNewCollection.updateOne(query, updateProject, options)
+            res.send(result)
+        })
+        app.post('/api/signup', async (req, res) => {
+            const user = req.body;
+            const existingUser = await usersCollection.findOne({ email: user.email });
+
+            if (existingUser) {
+                res.status(409).send({ error: 'Email already exists' });
+            } else {
+                const result = await usersCollection.insertOne(user);
+                res.send(result);
+            }
+        });
+
 
         app.get('/api/users', async (req, res) => {
             const users = usersCollection.find({});
@@ -54,30 +112,8 @@ async function run() {
             console.log(result);
             res.send(result);
         });
-        app.put('/api/editbook/:id', async (req, res) => {
-            const id = req.params.id
-            const query = { _id: new ObjectId(id) }
-            const projectBody = req.body
-            const options = { upsert: true }
-            const updateProject = {
-                $set: {
-                    title: projectBody.title,
-                    author: projectBody.author,
-                    genre: projectBody.genre,
-                    publicationdate: projectBody.publicationdate,
-                    rating: projectBody.rating,
-                }
-            }
-            const result = await booksCollection.updateOne(query, updateProject, options)
-            res.send(result)
-        })
-        app.delete('/api/book/:id', async (req, res) => {
-            const id = req.params.id;
 
-            const result = await booksCollection.deleteOne({ _id: new ObjectId(id) });
-            console.log(result);
-            res.send(result);
-        });
+
         app.post('/api/review/:id', async (req, res) => {
             const bookId = req.params.id;
             const review = req.body.review;
