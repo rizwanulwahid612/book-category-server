@@ -1,0 +1,121 @@
+[
+  {
+    
+    "image": "https://images.thenile.io/r1000/9781848588790.jpg",
+    "title": "Origin of Species",
+    "author":"Charles Darwin",
+    "genre":"Fiction",
+    "publicationdate":"2012-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+    "image": "https://c8.alamy.com/comp/GG2BRP/postage-stamp-representing-karl-marx-in-praise-of-his-major-work-wage-GG2BRP.jpg",
+    "title": "Das Kapital",
+    "author":"Karrxl Ma",
+    "genre":"Fiction",
+    "publicationdate":"2013-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+    
+    "image": "https://m.media-amazon.com/images/I/91rkh1YoRjL._AC_UF894,1000_QL80_.jpg",
+    "title": "The Pelican Brief",
+    "author":"John Grisham",
+    "genre":"History",
+    "publicationdate":"2014-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+    
+    "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71lwBSz39IL._AC_UF1000,1000_QL80_.jpg",
+    "title": "David Copperfield",
+    "author":"Charles Dickens",
+    "genre":"History",
+    "publicationdate":"2015-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+    
+    "image": "https://i.ebayimg.com/images/g/-A8AAOSwQMRj6h3g/s-l1200.webp",
+    "title": "The Client",
+    "author":"John Grisham",
+    "genre":"Poem",
+    "publicationdate":"2016-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+
+    "image": "https://mpd-biblio-covers.imgix.net/9781429959865.jpg",
+    "title": "A Tale of Two Cities",
+    "author":"Charles Dickens",
+    "genre":"Poem",
+    "publicationdate":"2017-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+
+    "image": "https://mpd-biblio-covers.imgix.net/9781429959278.jpg",
+    "title": "The Adventures of Tom Sawyer",
+    "author":"Mark Twain",
+    "genre":"Travel",
+    "publicationdate":"2018-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+
+    "image": "https://cdn.kobo.com/book-images/9cdfbb2e-4ea0-45c3-b62a-3d3958034514/1200/1200/False/the-adventures-of-huckleberry-finn-257.jpg",
+    "title": "The Adventures of Huckleberry Finn",
+    "author":"Mark Twain",
+    "genre":"Travel",
+    "publicationdate":"2019-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+
+    "image": "https://teacherofya.files.wordpress.com/2017/08/img_1236.jpg?w=900",
+    "title": "Harry Potter and the Goblet of Fire",
+    "author":"J.K. Rowling",
+    "genre":"Fairy tell",
+    "publicationdate":"2020-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+
+    "image": "https://wordsweheart.files.wordpress.com/2014/08/free-wallpapers-harry-potter-and-the-prisoner-of-azkaban-movie-images-harry-potter-wallpaper.jpg?w=1400",
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "author":"J.K. Rowling",
+    "genre":"Fairy tell",
+    "publicationdate":"2021-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+
+    "image": "https://images-na.ssl-images-amazon.com/images/I/91RK0gVPWQL.jpg",
+    "title": "A Christmas Carol",
+    "author":"Charles Dickens",
+    "genre":"Fairy tell",
+    "publicationdate":"2022-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  },
+  {
+
+    "image": "https://cdn.kobo.com/book-images/cf0a230b-1241-4ecd-9bcd-e1bc3463decf/1200/1200/False/alice-in-wonderland-170.jpg",
+    "title": "Alice in Wonderland",
+    "author":"Lewis Carrol",
+    "genre":"Fairy tell",
+    "publicationdate":"2023-04-23T18:25:43.511Z",
+    "rating": 4,
+    "reviews": []
+  }
+]
